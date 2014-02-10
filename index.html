@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LGTM generator</title>
+    <script src="jquery.js"></script>
+    <script src="easel.js"></script>
+    <script src="index.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-19063513-2']);
+        _gaq.push(['_setDomainName', '.cfe.jp']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <h1>LGTM generator</h1>
+    <canvas id="canvas" width="100" height="100"></canvas><br>
+    * テキストをドラッグして移動できます<br>
+    <h3>text settings</h3>
+    <label>message<br><textarea id="string">LGTM!!</textarea></label><br>
+    <button onclick="deltaFontSize(10)">Font++</button>
+    <button onclick="deltaFontSize(-10)">Font--</button><br>
+    <h3>load image</h3>
+    <input id="imageFile" type="file"><br>
+    * 画像データはサーバーに送信されません（JS内で処理します）
+    <h3>save image</h3>
+    <button id="save">generate jpeg</button><br>
+
+    <h3>about</h3>
+    create by <a href="http://cfe.jp">uzulla</a><br>
+    powered by <a href="http://www.createjs.com/#!/EaselJS" target="_blank">EaselJS</a>
+</body>
+</html>
