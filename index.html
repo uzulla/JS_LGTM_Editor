@@ -25,28 +25,29 @@
     <canvas id="canvas" width="100" height="100"></canvas><br>
     * テキストをドラッグして移動できます<br>
     * iPhoneなどは下のcursorつかってください<br>
-    <h3>text settings</h3>
-    <label>message<br><textarea id="string">LGTM!!</textarea></label><br>
-    <button onclick="deltaFontSize(10)">Font++</button>
-    <button onclick="deltaFontSize(-10)">Font--</button><br>
     <p>cursor</p>
-    <table>
+    <table style="float:left;margin-right:20px;">
         <tr>
             <td></td>
-            <td><button onclick="moveText('k')">↑</button></td>
+            <td><button onclick="moveText('k')" style="width:50px;height:50px">↑</button></td>
             <td></td>
         </tr>
         <tr>
-            <td><button onclick="moveText('h')">←</button></td>
+            <td><button onclick="moveText('h')" style="width:50px;height:50px">←</button></td>
             <td></td>
-            <td><button onclick="moveText('l')">→</button></td>
+            <td><button onclick="moveText('l')" style="width:50px;height:50px">→</button></td>
         </tr>
         <tr>
             <td></td>
-            <td><button onclick="moveText('j')">↓</button></td>
+            <td><button onclick="moveText('j')" style="width:50px;height:50px">↓</button></td>
             <td></td>
         </tr>
     </table>
+
+    <h3>text settings</h3>
+    <label>message<br><textarea id="string">LGTM!!</textarea></label><br>
+    <button onclick="deltaFontSize(10)" style="font-size:150%">Font++</button>
+    <button onclick="deltaFontSize(-10)" style="font-size:150%">Font--</button><br>
 
     <h3>load image</h3>
     <input id="imageFile" type="file"><br>
