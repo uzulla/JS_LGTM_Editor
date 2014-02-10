@@ -25,8 +25,12 @@
     <canvas id="canvas" width="100" height="100"></canvas><br>
     * テキストをドラッグして移動できます<br>
     * iPhoneなどは下のcursorつかってください<br>
-    <p>cursor</p>
+
+    <h3>text settings</h3>
     <table style="float:left;margin-right:20px;">
+        <tr>
+            <td colspan="3">cursor</td>
+        </tr>
         <tr>
             <td></td>
             <td><button onclick="moveText('k')" style="width:50px;height:50px">↑</button></td>
@@ -44,8 +48,8 @@
         </tr>
     </table>
 
-    <h3>text settings</h3>
-    <label>message<br><textarea id="string">LGTM!!</textarea></label><br>
+    <p>text settings</p>
+    <label>message<br><textarea id="string" style="font-size:150%;width:300px;height:80px">LGTM!!</textarea></label><br>
     <button onclick="deltaFontSize(10)" style="font-size:150%">Font++</button>
     <button onclick="deltaFontSize(-10)" style="font-size:150%">Font--</button><br>
 
