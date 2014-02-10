@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>LGTM generator</title>
+    <title>LGTM Editor</title>
     <script src="jquery.js"></script>
     <script src="easel.js"></script>
     <script src="index.js"></script>
@@ -20,13 +20,15 @@
     </script>
 </head>
 <body>
-    <h1>LGTM generator</h1>
+    <h1>LGTM Editor</h1>
+
     <canvas id="canvas" width="100" height="100"></canvas><br>
     * テキストをドラッグして移動できます<br>
     <h3>text settings</h3>
     <label>message<br><textarea id="string">LGTM!!</textarea></label><br>
     <button onclick="deltaFontSize(10)">Font++</button>
     <button onclick="deltaFontSize(-10)">Font--</button><br>
+
     <h3>load image</h3>
     <input id="imageFile" type="file"><br>
     * 画像データはサーバーに送信されません（JS内で処理します）
