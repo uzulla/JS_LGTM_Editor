@@ -1,6 +1,8 @@
 LGTM Editor
 ==============
 
+![screen shot](doc/ss.jpg)
+
 LGTMの画像を作成します。
 
 全部Javascriptで動作します。
