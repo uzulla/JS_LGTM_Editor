@@ -28,6 +28,24 @@
     <label>message<br><textarea id="string">LGTM!!</textarea></label><br>
     <button onclick="deltaFontSize(10)">Font++</button>
     <button onclick="deltaFontSize(-10)">Font--</button><br>
+    <p>cursor</p>
+    <table>
+        <tr>
+            <td></td>
+            <td><button onclick="moveText('k')">↑</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button onclick="moveText('h')">←</button></td>
+            <td></td>
+            <td><button onclick="moveText('l')">→</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="moveText('j')">↓</button></td>
+            <td></td>
+        </tr>
+    </table>
 
     <h3>load image</h3>
     <input id="imageFile" type="file"><br>

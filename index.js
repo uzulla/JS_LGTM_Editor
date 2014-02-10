@@ -134,3 +134,18 @@ function deltaFontSize(diff){
     setFontSize(lgtm_text_outline, px);
 }
 
+function moveText(direction){
+   if(direction=='k'){
+       container.y += -10;
+   }
+    if(direction=='j'){
+        container.y += 10;
+    }
+    if(direction=='l'){
+        container.x += 10;
+    }
+    if(direction=='h'){
+        container.x -= 10;
+    }
+
+}
