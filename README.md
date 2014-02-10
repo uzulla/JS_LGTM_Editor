@@ -5,6 +5,8 @@ LGTMの画像を作成します。
 
 全部Javascriptで動作します。
 
+[sample site](http://s.cfe.jp/lgtm/)
+
 # see also
 
 [LGTM.in/g](http://www.lgtm.in/)
