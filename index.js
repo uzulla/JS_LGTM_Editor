@@ -17,6 +17,7 @@ $(function(){ // init
 
     img = new createjs.Bitmap("lgtm.jpg");
     img.image.onload = imageLoadFinish;
+    img.image.onerror = imageLoadError;
     stage.addChild(img);
 
     container = new createjs.Container();
@@ -45,7 +46,25 @@ $(function(){ // init
     dropZone.addEventListener('drop', handleFileSelect, false);
     dropZone.addEventListener('dragleave', handleDragLeave, false);
 
+    $('#loadByUrl').on('click', loadByUrl);
+
 });
+
+function imageLoadError(){
+    alert("Error:画像のロードに失敗しました\n指定したものが画像でないか、取得できません。");
+}
+
+function loadByUrl(){
+    var url = $("#imageUrl").val();
+    console.log(url);
+
+    if(!url.match(/^http/)){
+        return 'httpからはじまるURLを指定してください';
+    }
+
+    img.image.src = url;
+
+}
 
 function loadImage(){
     var file = this.files[0];

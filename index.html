@@ -54,9 +54,12 @@
     <button onclick="deltaFontSize(-10)" style="font-size:150%">Font--</button><br>
 
     <h3>load image</h3>
+    <h5>by local file</h5>
     <input id="imageFile" type="file"><br>
     * 画像データはサーバーに送信されません（JS内で処理します）
     <div id="dnd_area" style="padding:20px;border: solid #000">または、ここにドラッグアンドドロップしてください</div>
+    <h5>by remote file</h5>
+    Image Url: <input type="text" placeholder="画像URLをいれてください" id="imageUrl"><button id="loadByUrl">load</button><br>
 
     <h3>save image</h3>
     <button id="save">generate jpeg</button><br>
