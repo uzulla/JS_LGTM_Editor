@@ -39,6 +39,12 @@ $(function(){ // init
     $('#string').on('keyup change', textChange).trigger('change');
     $('#save').on('click', saveImage);
 
+    //DnD
+    var dropZone = document.getElementById('dnd_area');
+    dropZone.addEventListener('dragover', handleDragOver, false);
+    dropZone.addEventListener('drop', handleFileSelect, false);
+    dropZone.addEventListener('dragleave', handleDragLeave, false);
+
 });
 
 function loadImage(){
@@ -90,6 +96,48 @@ function imageLoadFinish(e){
     container.x = (stage.width - lgtm_text.getMeasuredWidth()) / 2;
     container.y = stage.height - (lgtm_text.getMeasuredHeight()*2);
 
+}
+
+function handleFileSelect(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $(e.target).removeClass('on');
+    $(e.target).addClass('send');
+
+    var files = e.dataTransfer.files; // FileList object.
+
+    if(files.length!=1){
+        alert('allow only one file in upload.');
+        return;
+    }
+
+    var file = files[0];
+
+    if (!file.type.match(/^image\/(png|jpeg|gif)$/)){
+        alert('plz set jpg,gif,png');
+        return;
+    }
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        img.image.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+    $(e.target).css('backgroundColor', '');
+
+}
+
+function handleDragOver(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+    $(e.target).css('backgroundColor', 'red');
+}
+
+function handleDragLeave(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $(e.target).css('backgroundColor', '');
 }
 
 function saveImage(){
