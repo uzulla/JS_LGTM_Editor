@@ -1,6 +1,6 @@
 "use strict";
 
-var MAX_PX_SIZE = 1000;
+var MAX_PX_SIZE = 600;
 
 var stage;
 var canvas;
