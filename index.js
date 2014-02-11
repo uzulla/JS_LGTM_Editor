@@ -189,7 +189,14 @@ function handleDragLeave(e) {
 }
 
 function saveImage(){
-    window.location.href = canvas.toDataURL('image/jpeg', 0.7);
+    try{
+        window.location.href = canvas.toDataURL('image/jpeg', 0.7);
+    }catch(e){
+        alert("変換に失敗しました、URLで画像を読み込んでいる場合は仕様です。\n" +
+            "Firefoxは画像を右クリ保存してください\n" +
+            "chromeは…良い逃げ道が思い浮かばない…\n\n"+
+            e);
+    }
 }
 
 function dragMove(eventObject){
