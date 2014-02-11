@@ -5,4 +5,5 @@ var fontList = [
     ['Bowlby One SC','http://fonts.googleapis.com/css?family=Bowlby+One+SC'],
     ['Fascinate','http://fonts.googleapis.com/css?family=Fascinate'],
     ['Vibur','http://fonts.googleapis.com/css?family=Vibur'],
+    ['Audiowide','http://fonts.googleapis.com/css?family=Audiowide']
 ];
