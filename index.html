@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <title>LGTM Editor</title>
     <script src="jquery.js"></script>
+    <script src="font.js"></script>
     <script src="easel.js"></script>
     <script src="index.js"></script>
 
@@ -52,6 +53,10 @@
     <label>message<br><textarea id="string" style="font-size:150%;width:300px;height:80px">LGTM!!</textarea></label><br>
     <button onclick="deltaFontSize(10)" style="font-size:150%">Font++</button>
     <button onclick="deltaFontSize(-10)" style="font-size:150%">Font--</button><br>
+    font name:
+    <select id="fontName">
+        <option>Arial</option>
+    </select>
 
     <h3>load image</h3>
     <h5>by local file</h5>

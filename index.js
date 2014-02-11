@@ -8,8 +8,11 @@ var lgtm_text;
 var lgtm_text_outline;
 var container;
 var img;
+var fontNameList = ['Arial'];
 
 $(function(){ // init
+    loadFont();
+
     $("#imageFile").change(loadImage);
 
     canvas = document.getElementById("canvas");
@@ -47,8 +50,34 @@ $(function(){ // init
     dropZone.addEventListener('dragleave', handleDragLeave, false);
 
     $('#loadByUrl').on('click', loadByUrl);
-
+    $('#fontName').on('change', changeFontName);
 });
+
+function changeFontName(e){
+    var elm = e.target;
+    var fontName = $('option:selected', elm).val();
+    setFont(fontName);
+
+}
+
+function loadFont(){
+    $.each(fontList, function(index,value){
+        var css = $("<link rel='stylesheet' type='text/css'>");
+        console.log()
+        css.prop('href', value[1]);
+        $('head').append(css);
+        fontNameList.push(value[0]);
+        $('#fontName').append($('<option>').text(value[0]));
+    });
+    console.log(fontNameList);
+}
+
+function setFont(fontName){
+    var list = lgtm_text.font.match('^([^ ]+) ([^ ]+) (.+)$');
+    var cssstr = list[1]+" "+list[2]+" "+fontName;
+    lgtm_text.font = cssstr;
+    lgtm_text_outline.font = cssstr;
+}
 
 function imageLoadError(){
     alert("Error:画像のロードに失敗しました\n指定したものが画像でないか、取得できません。");
@@ -185,8 +214,8 @@ function stopDrag(eventObject) {
 }
 
 function setFontSize(target, px){
-    var list = target.font.split(' ');
-    target.font = list[0]+" "+px+"px "+list[2];
+    var list = lgtm_text.font.match('^([^ ]+) ([^ ]+) (.+)$');
+    target.font = list[1]+" "+px+"px "+list[3];
 }
 
 function getFontSize(target){
