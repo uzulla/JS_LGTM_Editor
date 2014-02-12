@@ -31,43 +31,44 @@
     * テキストをドラッグして移動できます<br>
     * iPhoneなどは下のcursorつかってください<br>
 
-    <div style="float:left;margin-right:20px;">
     <h3>text settings</h3>
-    <table>
-        <tr>
-            <td colspan="3">cursor</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button onclick="moveText('k')" style="width:50px;height:50px">↑</button></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><button onclick="moveText('h')" style="width:50px;height:50px">←</button></td>
-            <td></td>
-            <td><button onclick="moveText('l')" style="width:50px;height:50px">→</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button onclick="moveText('j')" style="width:50px;height:50px">↓</button></td>
-            <td></td>
-        </tr>
-    </table>
+    <div style="float:left;margin-right:20px;">
+        <table>
+            <tr>
+                <td colspan="3">cursor</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="moveText('k')" style="width:50px;height:50px">↑</button></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button onclick="moveText('h')" style="width:50px;height:50px">←</button></td>
+                <td></td>
+                <td><button onclick="moveText('l')" style="width:50px;height:50px">→</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="moveText('j')" style="width:50px;height:50px">↓</button></td>
+                <td></td>
+            </tr>
+        </table>
     </div>
 
-    <div>
-    <p>text settings</p>
-    <label>message<br><textarea id="string" style="font-size:150%;width:300px;height:80px">LGTM!!</textarea></label><br>
-    <button onclick="deltaFontSize(10)" style="font-size:150%">Font++</button>
-    <button onclick="deltaFontSize(-10)" style="font-size:150%">Font--</button><br>
-    font name:
-    <select id="fontName">
-        <option>Arial</option>
-    </select><br>
-
-    font color: fill<input type='color' id='color_fill' value='#FFFFFF' />
-    stroke <input type='color' id='color_stroke' value='#000000' />
+    <div style="float:left;">
+        <label>message<br><textarea id="string" style="font-size:150%;width:300px;height:80px">LGTM!!</textarea></label><br>
+        <button onclick="deltaFontSize(10)" style="font-size:150%">Font++</button>
+        <button onclick="deltaFontSize(-10)" style="font-size:150%">Font--</button><br>
+        <br>
+        font name:
+        <select id="fontName">
+            <option>Arial</option>
+        </select><br>
+        <br>
+        font color: fill <input type='color' id='color_fill' value='#FFFFFF' />
+        stroke <input type='color' id='color_stroke' value='#000000' />
     </div>
+    <br style="clear:both;">
 
     <h3>load image</h3>
     <h5>by local file</h5>
