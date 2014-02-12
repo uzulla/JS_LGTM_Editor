@@ -51,19 +51,25 @@ $(function(){ // init
 
     $('#loadByUrl').on('click', loadByUrl);
     $('#fontName').on('change', changeFontName);
+    $('#color_fill').on('change', changeFontColor);
+    $('#color_stroke').on('change', changeFontColor).trigger('change');
+
 });
+
+function changeFontColor(){
+    lgtm_text.color = $('#color_fill').val();
+    lgtm_text_outline.color = $('#color_stroke').val();
+}
 
 function changeFontName(e){
     var elm = e.target;
     var fontName = $('option:selected', elm).val();
     setFont(fontName);
-
 }
 
 function loadFont(){
     $.each(fontList, function(index,value){
         var css = $("<link rel='stylesheet' type='text/css'>");
-        console.log()
         css.prop('href', value[1]);
         $('head').append(css);
         fontNameList.push(value[0]);
