@@ -77,11 +77,11 @@
     * 画像データはサーバーに送信されません（JS内で処理します）
     <div id="dnd_area" style="padding:20px;border: solid #000">または、ここにドラッグアンドドロップしてください</div>
     <h5>by remote file</h5>
+    <p>* 画像データはサーバー経由で取得されます（same origin policy回避の為、X-forwarded−forで相手にIPは通知されます)</p>
     Image Url: <input type="text" placeholder="画像URLをいれてください" id="imageUrl"><button id="loadByUrl">load</button><br>
 
     <h3>save image</h3>
     <button id="save">generate jpeg</button><br>
-    * 残念ですが、URLでロードするとこのボタンうごきません。画像を右クリ保存してください。
 
     <h3>about</h3>
     <p><a href="https://github.com/uzulla/JS_LGTM_Editor">https://github.com/uzulla/JS_LGTM_Editor</a></p>

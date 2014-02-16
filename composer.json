@@ -1,0 +1,9 @@
+{
+    "require": {
+        "php-curl-class/php-curl-class": "*",
+        "Respect/Validation": "*"
+    },
+    "autoload": {
+        "psr-0": {"": "lib/"}
+    }
+}

@@ -1,0 +1,168 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "16d105f8c7a2487e95be6bbf0f4b8926",
+    "packages": [
+        {
+            "name": "php-curl-class/php-curl-class",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-curl-class/php-curl-class.git",
+                "reference": "ff2283478ddec79b4933034084b290d17b05bbeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-curl-class/php-curl-class/zipball/ff2283478ddec79b4933034084b290d17b05bbeb",
+                "reference": "ff2283478ddec79b4933034084b290d17b05bbeb",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PHP Curl Class is an object-oriented wrapper of the PHP cURL extension.",
+            "time": "2014-01-23 05:14:32"
+        },
+        {
+            "name": "respect/validation",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Respect/Validation.git",
+                "reference": "d2ca4b5d56176ed1a8c890e15b42281d118d93b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/d2ca4b5d56176ed1a8c890e15b42281d118d93b2",
+                "reference": "d2ca4b5d56176ed1a8c890e15b42281d118d93b2",
+                "shasum": ""
+            },
+            "require-dev": {
+                "symfony/validator": "2.*",
+                "zendframework/zend-validator": "2.*"
+            },
+            "suggest": {
+                "ext-bcmath": "*",
+                "ext-mbstring": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Respect\\Validation": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD Style"
+            ],
+            "authors": [
+                {
+                    "name": "Henrique Moody",
+                    "email": "henriquemoody@gmail.com",
+                    "homepage": "http://henriquemoody.com/"
+                },
+                {
+                    "name": "Alexandre Gaigalas",
+                    "email": "alexandre@gaigalas.net"
+                },
+                {
+                    "name": "Carlos André Ferrari",
+                    "email": "caferrari@gmail.com",
+                    "homepage": "http://ferrari.eti.br/"
+                },
+                {
+                    "name": "Devin Torres",
+                    "email": "devin@devintorres.com"
+                },
+                {
+                    "name": "Emerson Carvalho",
+                    "email": "emerson.broga@gmail.com"
+                },
+                {
+                    "name": "Fábio da Silva Ribeiro",
+                    "email": "fabiorphp@gmail.com"
+                },
+                {
+                    "name": "Jair Henrique",
+                    "email": "jair.henrique@gmail.com"
+                },
+                {
+                    "name": "Jayson Reis",
+                    "email": "santosdosreis@gmail.com"
+                },
+                {
+                    "name": "Jean Pimentel",
+                    "email": "jeanfap@gmail.com"
+                },
+                {
+                    "name": "Kleber Hamada Sato",
+                    "email": "kleberhs007@yahoo.com"
+                },
+                {
+                    "name": "Leandro",
+                    "email": "lleitep3@gmail.com"
+                },
+                {
+                    "name": "Marcelo Araujo",
+                    "email": "msaraujo@php.net"
+                },
+                {
+                    "name": "Michael Klishin",
+                    "email": "michaelklishin@me.com"
+                },
+                {
+                    "name": "Morf",
+                    "email": "i@morfi.ru"
+                },
+                {
+                    "name": "Rogerio Prado de Jesus",
+                    "email": "rogeriopradoj@gmail.com"
+                },
+                {
+                    "name": "Torben Brodt",
+                    "email": "t.brodt@gmail.com"
+                },
+                {
+                    "name": "Kinn Coelho Julião",
+                    "email": "kinncj@gmail.com",
+                    "homepage": "http://kinncj.com.br",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Augusto Pascutti",
+                    "email": "augusto@phpsp.org.br"
+                }
+            ],
+            "description": "The most awesome validation engine ever created for PHP",
+            "homepage": "http://respect.li",
+            "keywords": [
+                "respect",
+                "validation",
+                "validator"
+            ],
+            "time": "2013-12-10 02:50:32"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

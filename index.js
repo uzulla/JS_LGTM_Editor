@@ -90,15 +90,9 @@ function imageLoadError(){
 }
 
 function loadByUrl(){
-    var url = $("#imageUrl").val();
+    var url = "proxy.php?url="+$("#imageUrl").val();
     console.log(url);
-
-    if(!url.match(/^http/)){
-        return 'httpからはじまるURLを指定してください';
-    }
-
     img.image.src = url;
-
 }
 
 function loadImage(){

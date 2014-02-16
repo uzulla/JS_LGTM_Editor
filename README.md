@@ -9,6 +9,14 @@ LGTMの画像を作成します。
 
 [sample site](http://s.cfe.jp/lgtm/)
 
+# setup
+
+`by remote file`を利用するには`proxy.php`を利用するセットアップが必要です、Composer installしてください。
+
+```
+$ composer install
+```
+
 # see also
 
 [LGTM.in/g](http://www.lgtm.in/)
