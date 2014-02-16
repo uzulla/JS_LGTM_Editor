@@ -74,14 +74,19 @@
     <h3>load image</h3>
     <h5>by local file</h5>
     <input id="imageFile" type="file"><br>
-    * 画像データはサーバーに送信されません（JS内で処理します）
+    <p>* 画像データはサーバーを経由しません（JS内で処理します）</p>
     <div id="dnd_area" style="padding:20px;border: solid #000">または、ここにドラッグアンドドロップしてください</div>
     <h5>by remote file</h5>
     <p>* 画像データはサーバー経由で取得されます（same origin policy回避の為、X-forwarded−forで相手にIPは通知されます)</p>
     Image Url: <input type="text" placeholder="画像URLをいれてください" id="imageUrl"><button id="loadByUrl">load</button><br>
 
     <h3>save image</h3>
-    <button id="save">generate jpeg</button><br>
+    <p>* 画像データはサーバー経由でDLされます(が、保存とかはしてません)</p>
+    <button id="save">save jpeg</button><br>
+
+    <h3>generate image</h3>
+    <p>* 画像データはサーバーを経由しませんが（JS内で処理します）、保存ダイアログはでません</p>
+    <button id="generateImage">generate jpeg</button><br>
 
     <h3>about</h3>
     <p><a href="https://github.com/uzulla/JS_LGTM_Editor">https://github.com/uzulla/JS_LGTM_Editor</a></p>

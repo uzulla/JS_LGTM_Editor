@@ -42,6 +42,7 @@ $(function(){ // init
 
     $('#string').on('keyup change', textChange).trigger('change');
     $('#save').on('click', saveImage);
+    $('#generateImage').on('click', generateImage);
 
     //DnD
     var dropZone = document.getElementById('dnd_area');
@@ -188,7 +189,7 @@ function handleDragLeave(e) {
     $(e.target).css('backgroundColor', '');
 }
 
-function saveImage(){
+function generateImage(){
     try{
         window.location.href = canvas.toDataURL('image/jpeg', 0.7);
     }catch(e){
@@ -196,6 +197,18 @@ function saveImage(){
             "Firefoxは画像を右クリ保存してください\n" +
             "chromeは…良い逃げ道が思い浮かばない…\n\n"+
             e);
+    }
+}
+
+function saveImage(){
+    try{
+        var data_url = canvas.toDataURL('image/jpeg', 0.7);
+        var form = $('<form method="post" action="save.php" target="_blank">');
+        form.append($('<input name="data_url">').val(data_url));
+        $('body').append(form);
+        form.submit();
+    }catch(e){
+        alert("保存に失敗しました"+e);
     }
 }
 
