@@ -139,6 +139,8 @@ function resizeImage(){
         stage.width = rsizew;
         stage.height = rsizeh;
     }else{
+        img.scaleX = 1;
+        img.scaleY = 1;
         canvas.width = w;
         canvas.height = h;
         stage.width = w;
