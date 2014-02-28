@@ -28,7 +28,8 @@ $c->error(function(){
     die_and_log($status=500, "head request error");
 });
 $c->get($url);
-error_log(print_r($c->response_headers,1));
+error_log($url);
+//error_log(print_r($c->response_headers,1));
 
 // check head res
 $length = null;
