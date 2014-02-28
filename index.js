@@ -118,12 +118,16 @@ function textChange(){
 }
 
 function imageLoadFinish(e){
-    var w = parseInt(e.target.width);
-    var h = parseInt(e.target.height);
+    resizeImage();
+}
+
+function resizeImage(){
+    var w = parseInt(img.image.width);
+    var h = parseInt(img.image.height);
 //    console.log('img loaded '+w+'x'+h);
 
-    // 許容最大サイズをこえていたらアスペクト比をたもったままリサイズ
-    if(w>MAX_PX_SIZE || h>MAX_PX_SIZE){
+    // アスペクト比をたもったままリサイズ
+    if(w>MAX_PX_SIZE || h>MAX_PX_SIZE || $('#fit_flag').prop('checked')){
         var scale = Math.min(MAX_PX_SIZE/w,MAX_PX_SIZE/h);
 //        console.log(scale);
         img.scaleX = scale;
@@ -144,8 +148,8 @@ function imageLoadFinish(e){
     // テキストを中央に移動
     container.x = (stage.width - lgtm_text.getMeasuredWidth()) / 2;
     container.y = stage.height - (lgtm_text.getMeasuredHeight()*2);
-
 }
+
 
 function handleFileSelect(e) {
     e.stopPropagation();
