@@ -55,6 +55,22 @@ $(function(){ // init
     $('#color_fill').on('change', changeFontColor);
     $('#color_stroke').on('change', changeFontColor).trigger('change');
 
+    // one touch change
+    $.each(sample_message_list, function(){
+        var text = this;
+        var _onclick = function(text){
+            return function(){
+                $('#string').val(text);
+                textChange();
+                moveTextCenter();
+            }
+        }
+        $('#oneTouchMessages').append(
+            $('<button></button>')
+                .text(text)
+                .on('click', _onclick(text))
+        );
+    });
 });
 
 function changeFontColor(){
@@ -113,8 +129,8 @@ function loadImage(){
 
 
 function textChange(){
-    lgtm_text.text = $(this).val();
-    lgtm_text_outline.text = $(this).val();
+    lgtm_text.text = $('#string').val();
+    lgtm_text_outline.text = $('#string').val();
 }
 
 function imageLoadFinish(e){
@@ -147,6 +163,10 @@ function resizeImage(){
         stage.height = h;
     }
 
+    moveTextCenter();
+}
+
+function moveTextCenter(){
     // テキストを中央に移動
     container.x = (stage.width - lgtm_text.getMeasuredWidth()) / 2;
     container.y = stage.height - (lgtm_text.getMeasuredHeight()*2);
