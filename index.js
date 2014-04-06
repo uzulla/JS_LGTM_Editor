@@ -215,14 +215,12 @@ function handleDragLeave(e) {
     $(e.target).css('backgroundColor', '');
 }
 
-function generateImage(){
+function generateImage(e){
     try{
-        window.location.href = canvas.toDataURL('image/jpeg', 0.7);
+        var dataURL = canvas.toDataURL('image/jpeg', 0.7);
+        $('#downloadImageLink').attr('href', dataURL);
     }catch(e){
-        alert("変換に失敗しました、URLで画像を読み込んでいる場合は仕様です。\n" +
-            "Firefoxは画像を右クリ保存してください\n" +
-            "chromeは…良い逃げ道が思い浮かばない…\n\n"+
-            e);
+        alert("変換に失敗しました。"+e);
     }
 }
 

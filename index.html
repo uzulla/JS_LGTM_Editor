@@ -85,13 +85,17 @@
     <p>* 画像データはサーバー経由で取得されます（same origin policy回避の為、X-forwarded−forで相手にIPは通知されます)</p>
     Image Url: <input type="text" placeholder="画像URLをいれてください" id="imageUrl"><button id="loadByUrl">load</button><br>
 
+    <hr>
     <h3>save image</h3>
-    <p>* 画像データはサーバー経由でDLされます(が、保存とかはしてません)</p>
-    <button id="save">save jpeg</button><br>
+    <p>* 画像データはサーバーを経由しません（JS内で処理します）</p>
+    <p>* ブラウザによっては動作しません（最新版のChromeやFirefoxをつかいましょう）</p>
+    <a id="downloadImageLink" download="lgtm.jpg" onclick="generateImage(event)" href="#">download jpeg</a><br>
 
-    <h3>generate image</h3>
-    <p>* 画像データはサーバーを経由しませんが（JS内で処理します）、保存ダイアログはでません</p>
-    <button id="generateImage">generate jpeg</button><br>
+
+    <hr>
+    <h3>save image (もし上が動かない場合)</h3>
+    <p>* 画像データはサーバー経由でDLされます(が、保存とかはしてません)</p>
+    <button id="save">download jpeg</button><br>
 
     <h3>about</h3>
     <p><a href="https://github.com/uzulla/JS_LGTM_Editor">https://github.com/uzulla/JS_LGTM_Editor</a></p>
