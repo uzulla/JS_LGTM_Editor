@@ -217,7 +217,7 @@ function handleDragLeave(e) {
 
 function generateImage(e){
     try{
-        var dataURL = canvas.toDataURL('image/jpeg', 0.7);
+        var dataURL = canvas.toDataURL('image/jpeg', 0.8);
         $('#downloadImageLink').attr('href', dataURL);
     }catch(e){
         alert("変換に失敗しました。"+e);
@@ -226,7 +226,7 @@ function generateImage(e){
 
 function saveImage(){
     try{
-        var data_url = canvas.toDataURL('image/jpeg', 0.7);
+        var data_url = canvas.toDataURL('image/jpeg', 0.8);
         var form = $('<form method="post" action="save.php" target="_blank">');
         form.append($('<input name="data_url">').val(data_url));
         $('body').append(form);
